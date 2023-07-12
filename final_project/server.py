@@ -17,11 +17,9 @@ def frenchToEnglish():
     translated_text = translator.french_to_english()
     return translated_text
 
-@app.route("/")
-@app.route("/index")
-def renderIndexPage():
-    # Write the code to render template
-    return render_index('index.html')
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
